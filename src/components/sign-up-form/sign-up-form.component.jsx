@@ -38,6 +38,7 @@ const SignUpForm = () => {
         email,
         password
       );
+
       await createUserDocumentFromAuth(user, { displayName });
       resetFormFields();
     } catch (error) {
@@ -57,7 +58,7 @@ const SignUpForm = () => {
 
   return (
     <div className="sign-up-container">
-        <h2>Don't have an account?</h2>
+      <h2>Don't have an account?</h2>
       <span>Sign up with your email and password</span>
       <form onSubmit={handleSubmit}>
         <FormInput
@@ -96,7 +97,9 @@ const SignUpForm = () => {
           value={confirmPassword}
         />
 
-        <Button buttonType='google' type="submit">Sign Up</Button>
+        <Button buttonType="google" type="submit">
+          Sign Up
+        </Button>
       </form>
     </div>
   );
