@@ -15,7 +15,7 @@ import "./navigation.styles.scss";
 const Navigation = () => {
   const { currentUser } = useContext(UserContext);
   const { isCartOpen } = useContext(CartContext);
-  
+
   return (
     <>
       <div className="navigation">
@@ -29,7 +29,9 @@ const Navigation = () => {
             SHOP
           </Link>
           {currentUser ? (
-            <span onClick={signOutUser} className="nav-link">SIGN OUT</span>
+            <span onClick={signOutUser} className="nav-link">
+              SIGN OUT
+            </span>
           ) : (
             <Link className="nav-link" to="/auth">
               SIGN IN
@@ -37,7 +39,7 @@ const Navigation = () => {
           )}
           <CartIcon />
         </div>
-        {isCartOpen && <CartDropdown /> }
+        {isCartOpen && <CartDropdown />}
       </div>
       <Outlet />
     </>
