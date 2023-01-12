@@ -35,14 +35,22 @@ export const ProductCartContainer = styled.div`
       display: flex;
     }
   }
+
   @media screen and (max-width: 800px) {
     width: 40vw;
-    &:hover {
-      .image {
-        opacity: unset;
-      }
-      button {
-        opacity: unset;
+    button {
+      display: block;
+      opacity: 0.9;
+      min-width: unset;
+      padding: 0 10px;
+
+      &:hover {
+        img {
+          opacity: unset;
+        }
+        button {
+          opacity: unset;
+        }
       }
     }
   }
